@@ -1,0 +1,766 @@
+@font-face {
+    font-family: "Roboto light";
+    src: url("../src/fonts/roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Regular";
+    src: url("../src/fonts/roboto/Roboto-Regular.ttf");
+}
+
+
+@font-face {
+    font-family: "Lemon";
+    src: url("../src/fonts/ofont.ru_Lemon.ttf");
+}
+
+@font-face {
+    font-family: "Zhizn";
+    src: url("../src/fonts/ofont.ru_Zhizn.ttf");
+}
+
+@font-face {
+    font-family: "Roboto bold";
+    src: url("../src/fonts/roboto/Roboto-Bold.ttf");
+}
+
+html,
+body {
+    padding: 0%;
+    margin: 0;
+    border: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+@keyframes drawBorderFromCenter {
+    0% {
+        background-size: 0 2px, 0 0, 100% 100%;
+    }
+
+    20% {
+        background-size: 100% 2px, 100% 0, 100% 100%;
+    }
+
+    66% {
+        background-size: 100% 2px, 100% 98%, 100% 100%;
+    }
+
+    99% {
+        background-size: 100% 2px, 100% 98%, 0 2px;
+    }
+}
+
+
+
+@keyframes orderBlockAnim {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 150%;
+    }
+}
+
+@keyframes imgAnim {
+    from {
+        transform: translate(-100%);
+    }
+
+    to {
+        transform: translate(0);
+    }
+}
+
+@keyframes imgAnimRight {
+    from {
+        transform: translate(100%);
+    }
+
+    to {
+        transform: translate(0);
+    }
+}
+
+
+body {
+    background-image: url("../src/img/background.png");
+    background-repeat: repeat-y;
+    background-size: 100%;
+    background-color: wheat;
+}
+
+.coffees img{
+    opacity: 0;
+}
+
+.header .header__logo {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.header .header__logo img {
+    max-height: 100px;
+}
+
+.header .header__navigation {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #2f1b0b;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 10px;
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+    transition: all 0.5s;
+}
+
+.header .header__navigation .navigation__link {
+    text-decoration: none;
+    color: #ddd8d3;
+    font-family: "Roboto light";
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+@keyframes logoAnim {
+    from{
+        transform: translate(0, -160%)
+    }
+    to{
+        transform: translate(0);
+    }
+}
+
+@keyframes shake {
+    0%{
+        transform: translate(-50%);
+    }
+    50%{
+        transform: translate(50%);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+.header .header__logo{
+    transition: all 0.5s;
+    transform: translate(0, -160%);
+}
+
+.header lottie-player{
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border: 0;
+}
+
+.header .header__navigation .navigation__link:hover{
+    cursor: pointer;
+    color: #FFBF73;
+}
+
+.wake_up-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    background: url("../src/img/coffe-background.png") no-repeat,
+        url("../src/img/back-coffe-background.png") no-repeat bottom right;
+}
+
+h1,
+h2,
+p {
+    color: #2f1b0b;
+}
+
+.text {
+    font-family: "Roboto Regular";
+    font-weight: 300;
+    font-size: 20px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.block-title {
+    font-family: "Lemon";
+    font-size: 50px;
+}
+
+/* @keyframes ultra-bigAnim{
+    from{
+        transform: rotate(5deg);
+    }
+    to{
+        transform: rotate(3deg);
+    }
+} */
+
+.block-title.ultra-big {
+    transition: all 2s;
+    margin: 90px 0;
+    font-size: 120px;
+    animation: ultra-bigAnim 4s infinite alternate-reverse;
+}
+
+.header .block-title.ultra-big {
+    min-height: 10vw;
+}
+
+button {
+    border-radius: 20px;
+    padding: 20px 80px;
+    border: 0;
+    background-color: #2f1b0b;
+    text-transform: uppercase;
+    font-family: "Roboto Regular";
+    color: #ddd8d3;
+    font-size: 20px;
+    margin-bottom: 26px;
+}
+
+img {
+    transition: all 0.5s;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+img:hover {
+    transform: scale(1.07);
+}
+
+.main {
+    margin-top: 60px;
+    opacity: 0;
+    transition: all 1.8s;
+}
+
+.main .order-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+}
+
+.order-block__information {
+    background: url("../src/img/rotated-background.png");
+    width: 150%;
+    height: 40vw;
+    background-position: center;
+    background-size: 20%;
+    transform: rotate(-30deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+}
+
+.title {
+    transform: rotate(30deg);
+    margin: 0 3%;
+
+}
+
+
+.title .text {
+    color: #ddd8d3;
+    max-width: 300px;
+}
+
+
+.order-block__information .block-title {
+    color: #f7e0e0;
+    margin: 0;
+}
+
+.first-cup {
+    align-self: flex-start;
+}
+
+.second-cup {
+    align-self: flex-end;
+}
+
+@keyframes centerAnim {
+    from {
+        transform: scale(1)
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.block-title.center {
+    font-family: "Zhizn";
+    font-size: 30px;
+    margin-top: 30%;
+    text-transform: uppercase;
+    border: 2px solid #ddd8d3;
+    padding: 50px 40px;
+    border-radius: 100%;
+    animation: centerAnim 2s infinite alternate;
+}
+
+p button {
+    margin-top: 20px;
+    padding: 0;
+    background-color: #ddd8d3;
+    color: #2f1b0b;
+    padding: 10px 15px;
+}
+
+.quality-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("../src/img/qualityBackground.png")
+}
+
+.quality__title {
+    font-family: "Roboto bold";
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+.text.discount {
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.quality-block .logo {
+    margin: 100px 0;
+}
+
+.quality-block .block-title {
+    margin-bottom: 5px;
+}
+
+.opening-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:
+        url("../src/img/ice.png") no-repeat,
+        url("../src/img/small.png") no-repeat,
+        url("../src/img/back-coffe-background.png") no-repeat,
+        url("../src/img/coffe-background.png") no-repeat;
+    background-position: 110% bottom, -10% bottom, right -100%, left -60%;
+    z-index: 100;
+}
+
+.main-phrase{
+    min-height: 400px;
+    background: url("../src/img/rotated-background.png");
+    background-size: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    justify-content: space-around;
+    background-attachment: fixed;
+}
+
+.main-phrase .block-title.ultra-big{
+    transform: none;
+    color:#ddd8d3;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.main-phrase .text{
+    margin-top: 10px;
+    color: #ddd8d3;
+}
+
+footer .logos{
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    padding: 30px;
+}
+
+footer img{
+    margin: 0 20px;
+}
+
+footer nav{
+    padding-top: 20px;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .navigation__link{
+    text-decoration: none;
+    font-family: "Roboto Regular";
+    color: #2f1b0b;
+    font-size: 20px;
+}
+
+@keyframes shakeBottleAnim {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+
+.shakeBottle{
+    animation: shakeBottleAnim 5s infinite alternate;
+}
+
+
+.coffee-background{
+    width: 600px;
+    height: 800px;
+    background: url("../src/img/coffe-background.png");
+    position: absolute;
+    left: 0;
+    transition: all 1s;
+}
+
+.loading-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    background-position: left, bottom;
+    transition: all 1s;
+    z-index: 99;
+}
+
+.loading{
+    position: absolute;
+    transition: all 1s;
+    height: 100%;
+    width: 100%;
+    background: url("../src/img/background.png");
+    z-index: 200;
+    overflow: hidden;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    left: 0;
+}
+
+@keyframes descriptionStart {
+    from{
+        transform: translate(80%, -150%);
+    }
+    to{
+        transform: translate(80%);
+    }
+}
+
+.loading-description{
+    display: block;
+    position: absolute;
+    transform: translate(80%);
+    right: 35%;
+    text-align: center;
+    justify-self: center;
+    width: 530px;
+    display: none;
+    height: 100%;
+    background-size: 50%;
+    background: url("../src/img/coffee-pattern-1.png");
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, .5);
+    transition: all 1s;
+}
+
+@keyframes resizedAnim {
+    from{
+        right: 35%;
+    }
+    to{
+        right: 80%;
+    }
+}
+
+
+
+.loading.resized{
+    flex-direction: row-reverse;
+}
+
+
+
+.loading.resized .loading-content{
+    transition-delay: .3s;
+    background: url("../src/img/background.png");
+    background-size: 100%;
+    box-shadow: 0 0 20px rgba(160, 160, 160, 0.2);
+    height: 100%;
+    padding: 0 2vw;
+    z-index: 300;
+    transform: translate(50%);
+    position: absolute;
+}
+
+@keyframes hideArrowResize {
+    0%{
+        opacity: 1;
+        display: block;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        display: none;
+    }
+}
+
+.loading-description.started.resized .arrow.resize{
+    animation: hideArrowResize 0.5s;
+    display: none;
+}
+
+.loading-description.started.resized{
+}
+
+.loading-description.started.resized{
+    width: 100%;
+    animation: resizedAnim 1s ease-in;
+    right: 80%;
+}
+
+.loading-description.started.resized .description{
+    left: 5%;
+    min-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+    height: 100%;
+    justify-content: flex-start;
+}
+
+.gallery img{
+    border-radius: 10px;
+}
+
+.loading.resized .coffee-background{
+    display: none;
+}
+
+.loading-description .description{
+    position: absolute;
+    z-index: 220;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    padding-bottom: 5vw;
+    min-width: 100%;
+}
+
+.description .arrow.resize{
+    bottom: 0;
+}
+
+.description .arrow.resize img{
+    background-color: #ddd8d3;
+    box-shadow: 0 0 10px rgba(255, 255, 255, .2);
+}
+
+.loading-description .description p, .loading-description .description h2{
+    transition: none;
+    color: #f7e0e0;
+    z-index: 220;
+    text-align: center;
+}
+
+.dark{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    z-index: 211;
+    transition: none;
+}
+
+.loading-description.started{
+    display: block;
+    animation: descriptionStart 1s;
+}
+
+
+@keyframes loadingContentLefted {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-60%);
+    }
+}
+
+.loading-content.lefted{
+    position: absolute;
+    transform: translate(-60%);
+    animation: loadingContentLefted 1s;
+}
+
+
+
+@keyframes lottieRotate {
+    0%{
+        transform: scale(0) rotate(90deg);
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1) rotate(0);
+    }
+}
+
+lottie-player {
+    margin: 0 auto;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 100%;
+    padding: 50px;
+    box-shadow: 10px 5px 20px rgba(0, 0, 0, .4);
+    animation: lottieRotate 1s alternate;
+    z-index: 250;
+    transition: all 1s;
+}   
+
+.coffee-background-img img{
+    width: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.coffee-background-img.back img{
+    width: 600px;
+    position: absolute;
+    left: 70%;
+}
+
+@keyframes loadingTitle {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(100px);
+    }
+}
+
+@keyframes loadingHide {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(0, -100%);
+    }
+}
+
+.loading .block-title.ultra-big{
+    animation: loadingTitle 5s initial alternate-reverse;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    padding: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: wheat;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2F1B0B;
+}
+
+button{
+    transition: all 0.5s;
+}
+
+.visit-button button:hover{
+    background-color: #FFBF73;
+    color: #2f1b0b;
+}
+
+.arrow:not(.right){
+    position: absolute;
+    bottom: 2vw;
+}
+
+.arrow img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #534d4d;
+}
+
+@keyframes arrowDownAnim {
+    from{
+        transform: translate(0, -10%);
+    }
+    to{
+        transform: translate(0, 0);
+    }
+}
+
+.arrow img{
+    width: 30px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .9);
+    padding: 15px;
+    animation: arrowDownAnim 1s infinite alternate-reverse;
+}
+
+.arrow.right{
+    position: absolute;
+    transform: rotate(-90deg);
+    right: 20%;
+}
+
+@keyframes loadingContentTextAnim {
+    from{
+        right: -50%;
+    }
+    to{
+        right: 25%;
+    }
+}
+
+.loading .text{
+    animation: loadingContentTextAnim 1s;
+    right: -50%;
+}
+
+.gallery{
+    width: 600px;
+    height: 500px;
+    background-color: #ddd8d3;
+    position: absolute;
+    bottom: 0;
+    left: 0; top: 32%; right: 50%;
+    margin: auto;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    z-index: 230;
+}
+
+.gallery img{
+    height: 300px;
+    width: 100%;
+}
