@@ -105,6 +105,10 @@ h2 .title-line{
     background-size: 30%, 30%;
 }
 
+.window h2{
+    color: white;
+}
+
 textarea{
     margin-top: 3vh;
     width: 35vw;
